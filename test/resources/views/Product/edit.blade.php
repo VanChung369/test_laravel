@@ -64,7 +64,7 @@
             <img style="width:250px; margin-top:10px" class="feature_image" src="{{ $product->image }}" alt="">
           </div>
         </div>
-        <div class="col-12" style="margin-left: 37px">
+        <div class="col-12" style="margin-left: -222px">
           <div class="form-check">
             <input class="form-check-input -mb-2" name="Activi" style="margin-left: 198px;" type="checkbox" value="1"
               id="invalidCheck">

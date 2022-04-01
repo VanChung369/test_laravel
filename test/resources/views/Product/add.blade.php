@@ -60,7 +60,7 @@
             <input type="file" class="form-control-file" name="feature_image_path">
           </div>
         </div>
-        <div class="col-12" style="margin-left: 37px">
+        <div class="col-12" style="margin-left: -222px">
           <div class="form-check">
             <input class="form-check-input -mb-2" name="Activi" style="margin-left: 198px;" type="checkbox" value="1"
               id="invalidCheck">
