@@ -30,16 +30,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $activi='';
-        if($request->Activi== 1)
-        {
-          $activi=1;
-        }
-        else
-        {
-           
-         $activi=0;
-
-        }
+       ($request->Activi==1)?$activi=1:$activi=0;
         try {
 
             DB::beginTransaction(); 
@@ -75,12 +66,6 @@ class ProductController extends Controller
     // // create htmlOption
     public function create()
     {
-           // DB::enableQueryLog();
-        // // $product->category()->get();
-        // // $product->category;
-        // $product->tags;
-        // $queries = DB::getQueryLog();
-        // dd($queries);
         $htmlOption = $this->getCategory();
         return view('product.add', compact('htmlOption'));
     }
@@ -95,16 +80,7 @@ class ProductController extends Controller
     {
         
         $activi='';
-        if($request->Activi== 1)
-        {
-          $activi=1;
-        }
-        else
-        {
-           
-         $activi=0;
-
-        }
+      ($request->Activi==1)?$activi=1:$activi=0;
         try {
             DB::beginTransaction();
             $dataProductUpdate = [
