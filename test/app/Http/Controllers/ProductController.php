@@ -23,7 +23,7 @@ class ProductController extends Controller
  
     public function index()
     {
-        $products = $this->product->paginate(5);
+        $products = $this->product->oldest()->paginate(5);
         return view('product.index', compact('products'));
     }
   
