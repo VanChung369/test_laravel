@@ -23,7 +23,7 @@ class ProductController extends Controller
  
     public function index()
     {
-        $products = $this->product->latest()->paginate(5);
+        $products = $this->product->paginate(5);
         return view('product.index', compact('products'));
     }
   
@@ -51,7 +51,7 @@ class ProductController extends Controller
             return redirect()->route('product.index');
         } catch (\Exception $exception) {
             DB::rollBack(); // loi se rollBack
-            Log::error('Message: ' . $exception->getMessage() . ' --- Line : ' . $exception->getLine()); // in ra thong bao error
+            Log::error('Message: ' . $exception->getMessage() . ' --- Line : ' . $exception->getLine());
         }
         return redirect()->route('product.index');
     }
